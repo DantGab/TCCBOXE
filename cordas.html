@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Artigos Esportivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo para o vídeo de fundo */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header {
+            background: rgba(8, 73, 25, 0.712);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        header h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-container .search-text {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .search-container input[type="text"], .search-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container input[type="text"] {
+            width: 300px;
+        }
+        .search-container button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-container button:hover {
+            background: #218838;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: rgba(0, 0, 0, 0.541);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(90, 89, 89, 0.192);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        .product h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    transition: color 0.3s; /* Corrigido para transição de cor */
+    color: white; /* Altere para branco */
+}
+
+        .product h2:hover {
+            color: #28a745;
+        }
+        .product p {
+            color: #d9ff00;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .product a:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(34, 34, 34, 0.8);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        footer .contacts a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        footer .contacts img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+        footer .contacts a:hover {
+            color: #28a745;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Vídeo de Fundo -->
+    <video autoplay muted loop class="bg-video">
+        <source src="Free HD Motion Background For Videos - Shiny Green Satin.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <header>
+        <img src="61.png" alt="Cabeçalho">
+        <h1><a href="quemsomos.html" style="color:white; text-decoration:none;"></a></h1>
+        <div class="search-container">
+            <div class="search-text">CORDAS</div> <!-- Texto verde ao lado esquerdo da barra de pesquisa -->
+            <input type="text" id="search" placeholder="Digite aqui...">
+            <button onclick="searchProduct()">Pesquisar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="luvas.html">LUVAS</a></li>
+                <li><a href="protetores.html">PROTETORES</a></li>
+                <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+                <li><a href="cordas.html">CORDAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Produtos -->
+        <div class="product">
+            <a href="https://www.goatesportivo.com.br/MLB-2180627644-corda-de-pular-profissional-com-rolamento-cabo-de-aco-p-m-g-_JM?variation=174211104818">
+                <img src="5.webp" alt="Produto 1">
+            </a>
+            <h2>Corda De Pular Profissional Com Rolamento Cabo De Aço</h2>
+            <p class="price">R$ 64,18</p>
+            <a href="https://www.goatesportivo.com.br/MLB-2180627644-corda-de-pular-profissional-com-rolamento-cabo-de-aco-p-m-g-_JM?variation=174211104818">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.netshoes.com.br/p/corda-de-pular-speed-rope-profissional-com-rolamento-targ-me-academia-cross-funcional-preto-RWJ-0008-006?campaign=gglepqpla">
+                <img src="6.webp" alt="Produto 2">
+            </a>
+            <h2>Corda de Pular Speed Rope Profissional com Rolamento</h2>
+            <p class="price">R$ 128,16</p>
+            <a href="https://www.netshoes.com.br/p/corda-de-pular-speed-rope-profissional-com-rolamento-targ-me-academia-cross-funcional-preto-RWJ-0008-006?campaign=gglepqpla">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.ortoponto.com.br/produto/corda-de-pular-pvc-para-atividade-fisica-hidrolight-275cm-998">
+                <img src="7.webp" alt="Produto 3">
+            </a>
+            <h2>Corda de Pular PVC para Atividade Física Hidrolight </h2>
+            <p class="price">R$ 24,90</p>
+            <a href="https://www.ortoponto.com.br/produto/corda-de-pular-pvc-para-atividade-fisica-hidrolight-275cm-998">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://shopee.com.br/product/374233565/23695625665?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBMmdBVEZiR05lNm1Tcm1OWnZVY1ZKNFByL1p2NkdFaGo1Q1hDTERRdzd1dDZOSU0rL2JDMENlSEUxckUrQjVGTEgxWTZpaldXdUI0d3B5QytWSXBBaVBDZSs5bjRHTld1VU1SaG94RDgwcUNnPT0">
+                <img src="8.webp" alt="Produto 4">
+            </a>
+            <h2>Corda De Pular Com Contador De Pulos E Rolamento HZ-511</h2>
+            <p class="price">R$ 30,00</p>
+            <a href="https://shopee.com.br/product/374233565/23695625665?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBMmdBVEZiR05lNm1Tcm1OWnZVY1ZKNFByL1p2NkdFaGo1Q1hDTERRdzd1dDZOSU0rL2JDMENlSEUxckUrQjVGTEgxWTZpaldXdUI0d3B5QytWSXBBaVBDZSs5bjRHTld1VU1SaG94RDgwcUNnPT0">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://shopee.com.br/product/236967463/3747512707?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWVp3RFo3Mkw5czd4Z0hzdEF1WVFibm9Va1hQQXdGWnk4czFUcnEwN2dkY1FOaXFCckFhZEVMaHd3MDJQa05pZ3N3ZFJhRE91UkxjeDVxa1Y1OHBldlN4byswQXdneUZlZjlJaExUQ3FESEo">
+                <img src="9.webp" alt="Produto 5">
+            </a>
+            <h2>Corda De Pular Frisada Ajustável e Leve-Diversas Cores Preços Variados</h2>
+            <p class="price">R$39,03 - R$42,58</p>
+            <a href="https://shopee.com.br/product/236967463/3747512707?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWVp3RFo3Mkw5czd4Z0hzdEF1WVFibm9Va1hQQXdGWnk4czFUcnEwN2dkY1FOaXFCckFhZEVMaHd3MDJQa05pZ3N3ZFJhRE91UkxjeDVxa1Y1OHBldlN4byswQXdneUZlZjlJaExUQ3FESEo">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.vollo.com.br/corda-de-pular-em-pvc-275cm/p?idsku=95">
+                <img src="shopping (4).webp" alt="Produto 6">
+            </a>
+            <h2>Corda de Pular em PVC 2,75 Metros Vollo</h2>
+            <p class="price">R$ 19,90</p>
+            <a href="https://www.vollo.com.br/corda-de-pular-em-pvc-275cm/p?idsku=95">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.magazineluiza.com.br/corda-pular-profissional-270m-para-treino-exercicio-funcional-e-academia-fss-variedades/p/gaja1a95ej/es/escp/?seller_id=lojafssvariedades">
+                <img src="11.webp" alt="Produto 7">
+            </a>
+            <h2>Corda Pular Profissional, 2,70m, Para Treino</h2>
+            <p class="price">R$ 33,02</p>
+            <a href="https://www.magazineluiza.com.br/corda-pular-profissional-270m-para-treino-exercicio-funcional-e-academia-fss-variedades/p/gaja1a95ej/es/escp/?seller_id=lojafssvariedades">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.mercadolivre.com.br/corda-de-pular-cross-3-metros-ajustavel-fit-treino-academia-mundo-compras/p/MLB28795812?matt_tool=18956390&attributes=COLOR_SECONDARY_COLOR%3AUHJldG8%3D&item_id=MLB4449540272&from=gshop">
+                <img src="10.webp" alt="Produto 8">
+            </a>
+            <h2>Vittak Corda De Pular Cross 3 Metros Ajustável Fit Treino Academia</h2>
+            <p class="price">R$ 18,90</p>
+            <a href="https://www.mercadolivre.com.br/corda-de-pular-cross-3-metros-ajustavel-fit-treino-academia-mundo-compras/p/MLB28795812?matt_tool=18956390&attributes=COLOR_SECONDARY_COLOR%3AUHJldG8%3D&item_id=MLB4449540272&from=gshop">Ver Produto</a>
+        </div>
+    </div>
+    
+    
+    <script>
+        function searchProduct() {
+            const searchInput = document.getElementById('search').value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+            const pages = {
+                'luvas': 'luvas.html',
+                'protetores': 'protetores.html',
+                'acessorios': 'acessorios.html',
+                'cordas': 'cordas.html'
+            };
+            const page = Object.keys(pages).find(key => searchInput.includes(key));
+            if (page) {
+                window.location.href = pages[page];
+            } else {
+                alert('Produto não encontrado!');
+            }
+        }
+    </script>
+</body>
+</html>

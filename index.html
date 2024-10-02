@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Artigos Esportivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo para o vídeo de fundo */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header {
+            background: rgba(8, 73, 25, 0.712);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        header h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-container .search-text {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .search-container input[type="text"], .search-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container input[type="text"] {
+            width: 300px;
+        }
+        .search-container button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-container button:hover {
+            background: #218838;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: rgba(0, 0, 0, 0.541);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(90, 89, 89, 0.192);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        .product h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    transition: color 0.3s; /* Corrigido para transição de cor */
+    color: white; /* Altere para branco */
+}
+
+        .product h2:hover {
+            color: #28a745;
+        }
+        .product p {
+            color: #d9ff00;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .product a:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(34, 34, 34, 0.8);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        footer .contacts a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        footer .contacts img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+        footer .contacts a:hover {
+            color: #28a745;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Vídeo de Fundo -->
+    <video autoplay muted loop class="bg-video">
+        <source src="Free HD Motion Background For Videos - Shiny Green Satin.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <header>
+        <img src="61.png" alt="Cabeçalho">
+        <h1><a href="quemsomos.html" style="color:white; text-decoration:none;"></a></h1>
+        <div class="search-container">
+            <div class="search-text">INÍCIO</div> <!-- Texto verde ao lado esquerdo da barra de pesquisa -->
+            <input type="text" id="search" placeholder="Digite aqui...">
+            <button onclick="searchProduct()">Pesquisar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="luvas.html">LUVAS</a></li>
+                <li><a href="protetores.html">PROTETORES</a></li>
+                <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+                <li><a href="cordas.html">CORDAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Produtos -->
+        <div class="product">
+            <a href="https://www.vollo.com.br/luva-de-boxe-muay-thai-kickboxing-training-12-oz-vermelha-e-preta-vollo/p?idsku=241">
+                <img src="shopping (8).webp" alt="Produto 1">
+            </a>
+            <h2>Luva de Boxe Training Vollo</h2>
+            <p class="price">R$ 239,90</p>
+            <a href="https://www.vollo.com.br/luva-de-boxe-muay-thai-kickboxing-training-12-oz-vermelha-e-preta-vollo/p?idsku=241">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.decathlon.com.br/conquilha-knockout-completa-unissex---preto-2145033681/p?idsku=2147426251">
+                <img src="shopping (3).webp" alt="Produto 2">
+            </a>
+            <h2>Coquilha Knockout Completa Unissex - Preto</h2>
+            <p class="price">R$ 289,99</p>
+            <a href="https://www.decathlon.com.br/conquilha-knockout-completa-unissex---preto-2145033681/p?idsku=2147426251">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://produto.mercadolivre.com.br/MLB-4806609712-luva-boxe-adida-speed-tilt-150-azul-vermelho-bolsa-_JM?matt_tool=18956390">
+                <img src="shopping.webp" alt="Produto 3">
+            </a>
+            <h2>Luvas de Boxe adidas Tilt 150 azul</h2>
+            <p class="price">R$ 269,89</p>
+            <a href="https://produto.mercadolivre.com.br/MLB-4806609712-luva-boxe-adida-speed-tilt-150-azul-vermelho-bolsa-_JM?matt_tool=18956390">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Branco-i.407616835.21998568243?sp_atk=1f498b05-d102-4d39-9da2-0e7f3843bb3f&xptdk=1f498b05-d102-4d39-9da2-0e7f3843bb3f">
+                <img src="shopping (5).webp" alt="Produto 4">
+            </a>
+            <h2>Protetor Bucal</h2>
+            <p class="price">R$ 29,90</p>
+            <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Branco-i.407616835.21998568243?sp_atk=1f498b05-d102-4d39-9da2-0e7f3843bb3f&xptdk=1f498b05-d102-4d39-9da2-0e7f3843bb3f">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://produto.mercadolivre.com.br/MLB-1024844721-coquilha-protetor-genital-saqueira-so-a-concha-acrilica-_JM?variation=173986307314#reco_item_pos=0&reco_backend=vip-p2p_mantika&reco_backend_type=low_level&reco_client=vip&reco_id=a16c11f5-e6f9-4b19-8c41-2cef8aad95e9">
+                <img src="shopping (1).webp" alt="Produto 5">
+            </a>
+            <h2>Coquilha Protetor Genital Saqueira - So A Concha Acrilica</h2>
+            <p class="price">R$ 29,63</p>
+            <a href="https://produto.mercadolivre.com.br/MLB-1024844721-coquilha-protetor-genital-saqueira-so-a-concha-acrilica-_JM?variation=173986307314#reco_item_pos=0&reco_backend=vip-p2p_mantika&reco_backend_type=low_level&reco_client=vip&reco_id=a16c11f5-e6f9-4b19-8c41-2cef8aad95e9">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.vollo.com.br/corda-de-pular-em-pvc-275cm/p?idsku=95">
+                <img src="shopping (4).webp" alt="Produto 6">
+            </a>
+            <h2>Corda de Pular em PVC 2,75 Metros Vollo</h2>
+            <p class="price">R$ 19,90</p>
+            <a href="https://www.vollo.com.br/corda-de-pular-em-pvc-275cm/p?idsku=95">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://produto.mercadolivre.com.br/MLB-2670803938-head-guard-capacete-de-boxe-mks-full-face-nose-protection-_JM?matt_tool=66649777&matt_word=&matt_source=google&matt_campaign_id=14302214874&matt_ad_group_id=124787841566&matt_match_type=&matt_network=g&matt_device=c&matt_creative=539425484563&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=300717770&matt_product_id=MLB2670803938&matt_product_partition_id=1816092891296&matt_target_id=pla-1816092891296&cq_src=google_ads&cq_cmp=14302214874&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=4">
+                <img src="shopping (6).webp" alt="Produto 7">
+            </a>
+            <h2>Capacete De Boxe Mks Full Face Nose Protection</h2>
+            <p class="price">R$ 299,90</p>
+            <a href="https://produto.mercadolivre.com.br/MLB-2670803938-head-guard-capacete-de-boxe-mks-full-face-nose-protection-_JM?matt_tool=66649777&matt_word=&matt_source=google&matt_campaign_id=14302214874&matt_ad_group_id=124787841566&matt_match_type=&matt_network=g&matt_device=c&matt_creative=539425484563&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=300717770&matt_product_id=MLB2670803938&matt_product_partition_id=1816092891296&matt_target_id=pla-1816092891296&cq_src=google_ads&cq_cmp=14302214874&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=4">Ver Produto</a>
+        </div>
+        <div class="product">
+            <a href="https://www.casasbahia.com.br/camiseta-regata-masculina-adidas-essentials-1561716795/p/1561716785?IdSku=1561716785&idLojista=97848&tipoLojista=3P">
+                <img src="shopping (7).webp" alt="Produto 8">
+            </a>
+            <h2>Camiseta Regata Masculina adidas Essentials</h2>
+            <p class="price">R$ 110,52</p>
+            <a href="https://www.casasbahia.com.br/camiseta-regata-masculina-adidas-essentials-1561716795/p/1561716785?IdSku=1561716785&idLojista=97848&tipoLojista=3P">Ver Produto</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 MPM BOXE. Todos os direitos reservados.</p>
+        <div class="contacts">
+            <a href="https://www.instagram.com/dantgab/" target="_blank">
+                <img src="INSTAGRAM.png" alt="Instagram">Instagram
+            </a>
+            <a href="https://www.facebook.com/PhewBielzix/" target="_blank">
+                <img src="fACEBOOK.png" alt="Facebook">Facebook
+            </a>
+            <p>Contato: +55 (61) 99676-0745 | odantgab@gmail.com</p>
+        </div>
+    </footer>
+    
+    <script>
+        function searchProduct() {
+            const searchInput = document.getElementById('search').value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+            const pages = {
+                'luvas': 'luvas.html',
+                'protetores': 'protetores.html',
+                'acessorios': 'acessorios.html',
+                'cordas': 'cordas.html'
+            };
+            const page = Object.keys(pages).find(key => searchInput.includes(key));
+            if (page) {
+                window.location.href = pages[page];
+            } else {
+                alert('Produto não encontrado!');
+            }
+        }
+    </script>
+</body>
+</html>

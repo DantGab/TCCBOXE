@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Artigos Esportivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo para o vídeo de fundo */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header {
+            background: rgba(8, 73, 25, 0.712);
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        header h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-container .search-text {
+            color: #28a745;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .search-container input[type="text"], .search-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container input[type="text"] {
+            width: 300px;
+        }
+        .search-container button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-container button:hover {
+            background: #218838;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: rgba(0, 0, 0, 0.541);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(90, 89, 89, 0.192);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        .product h2 {
+            font-size: 20px;
+            margin: 15px 0;
+            transition: color 0.3s; /* Corrigido para transição de cor */
+            color: white; /* Altere para branco */
+        }
+
+        .product h2:hover {
+            color: #28a745;
+        }
+        .product p {
+            color: #d9ff00;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .product a:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+        footer {
+            background: rgba(34, 34, 34, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0; /* Adicionado padding para melhorar o layout */
+        }
+        footer .contacts a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        footer .contacts img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+        footer .contacts a:hover {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <!-- Vídeo de Fundo -->
+    <video autoplay muted loop class="bg-video">
+        <source src="Free HD Motion Background For Videos - Shiny Green Satin.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <header>
+        <img src="61.png" alt="Cabeçalho">
+        <h1><a href="quemsomos.html" style="color:white; text-decoration:none;"></a></h1>
+        <div class="search-container">
+            <div class="search-text">PROTETORES</div> <!-- Texto verde ao lado esquerdo da barra de pesquisa -->
+            <input type="text" id="search" placeholder="Digite aqui...">
+            <button onclick="searchProduct()">Pesquisar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="luvas.html">LUVAS</a></li>
+                <li><a href="protetores.html">PROTETORES</a></li>
+                <li><a href="acessorios.html">ACESSÓRIOS</a></li>
+                <li><a href="cordas.html">CORDAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <<!-- Produtos -->
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Verde-i.826716821.21529248704?sp_atk=2034c69d-ade0-4896-8713-db9aa0ed7e98&xptdk=2034c69d-ade0-4896-8713-db9aa0ed7e98">
+        <img src="shopping (15).webp" alt="Produto 1">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Verde</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Verde-i.826716821.21529248704?sp_atk=2034c69d-ade0-4896-8713-db9aa0ed7e98&xptdk=2034c69d-ade0-4896-8713-db9aa0ed7e98">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Azul-i.826716821.18729249181?sp_atk=4d2ca9d9-ba6c-4c6e-9c3e-552ab18b665e&xptdk=4d2ca9d9-ba6c-4c6e-9c3e-552ab18b665e">
+        <img src="shopping (16).webp" alt="Produto 2">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Azul</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Azul-i.826716821.18729249181?sp_atk=4d2ca9d9-ba6c-4c6e-9c3e-552ab18b665e&xptdk=4d2ca9d9-ba6c-4c6e-9c3e-552ab18b665e">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Amarelo-i.826716821.20029248825?sp_atk=06506138-283f-4cef-ab30-9dae03fe0f90&xptdk=06506138-283f-4cef-ab30-9dae03fe0f90">
+        <img src="Shopping (17).webp" alt="Produto 3">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Amarelo</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Amarelo-i.826716821.20029248825?sp_atk=06506138-283f-4cef-ab30-9dae03fe0f90&xptdk=06506138-283f-4cef-ab30-9dae03fe0f90">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Rosa-i.826716821.20729249802?sp_atk=b224a5fa-8017-4aa7-a2e2-90d2f50e4a68&xptdk=b224a5fa-8017-4aa7-a2e2-90d2f50e4a68">
+        <img src="shopping (18).webp" alt="Produto 4">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Rosa</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Rosa-i.826716821.20729249802?sp_atk=b224a5fa-8017-4aa7-a2e2-90d2f50e4a68&xptdk=b224a5fa-8017-4aa7-a2e2-90d2f50e4a68">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Transparente-i.826716821.17480762912?sp_atk=1ea98a96-8df8-40fe-95b0-9fbd132912b7&xptdk=1ea98a96-8df8-40fe-95b0-9fbd132912b7">
+        <img src="1.webp" alt="Produto 5">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Trasparente</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Transparente-i.826716821.17480762912?sp_atk=1ea98a96-8df8-40fe-95b0-9fbd132912b7&xptdk=1ea98a96-8df8-40fe-95b0-9fbd132912b7">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Preto-i.826716821.20929248387?sp_atk=3f815aa4-d54a-43e3-a2eb-b498e7bacb25&xptdk=3f815aa4-d54a-43e3-a2eb-b498e7bacb25">
+        <img src="2.webp" alt="Produto 6">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Preto</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Preto-i.826716821.20929248387?sp_atk=3f815aa4-d54a-43e3-a2eb-b498e7bacb25&xptdk=3f815aa4-d54a-43e3-a2eb-b498e7bacb25">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Branco-i.826716821.21929250124?sp_atk=d90c3515-1df4-4f87-9430-fe1032c2944e&xptdk=d90c3515-1df4-4f87-9430-fe1032c2944e">
+        <img src="3.webp" alt="Produto 7">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Branco</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Branco-i.826716821.21929250124?sp_atk=d90c3515-1df4-4f87-9430-fe1032c2944e&xptdk=d90c3515-1df4-4f87-9430-fe1032c2944e">Ver Produto</a>
+</div>
+<div class="product">
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Laranja-i.826716821.19429249557?sp_atk=f5f2b77e-794a-4988-8a69-db4b0c705742&xptdk=f5f2b77e-794a-4988-8a69-db4b0c705742">
+        <img src="4.webp" alt="Produto 8">
+    </a>
+    <h2>Protetor Bucal PROFISSIONAL Spank-Laranja</h2>
+    <p class="price">R$ 29,90</p>
+    <a href="https://shopee.com.br/Protetor-Bucal-Superior-Profissional-Spank-Laranja-i.826716821.19429249557?sp_atk=f5f2b77e-794a-4988-8a69-db4b0c705742&xptdk=f5f2b77e-794a-4988-8a69-db4b0c705742">Ver Produto</a>
+</div>
+
+    
+    
+
+    <script>
+        function searchProduct() {
+            const searchTerm = document.getElementById("search").value;
+            alert("Buscando por: " + searchTerm);
+            // Lógica para buscar o produto
+        }
+    </script>
+</body>
+</html>
